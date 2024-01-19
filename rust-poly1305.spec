@@ -34,6 +34,8 @@ use the "%{crate}" crate.
 %license %{crate_instdir}/LICENSE-MIT
 %doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
+%exclude %{crate_instdir}/fuzz
+%exclude %{crate_instdir}/src/fuzz
 %{crate_instdir}/
 
 %package     -n %{name}+default-devel
