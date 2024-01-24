@@ -5,7 +5,7 @@
 %global crate cached
 
 Name:           rust-cached
-Version:        0.47.0
+Version:        0.48.1
 Release:        %autorelease
 Summary:        Generic cache implementations and simplified function memoization
 
