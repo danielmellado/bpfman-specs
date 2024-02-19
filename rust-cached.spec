@@ -12,6 +12,8 @@ Summary:        Generic cache implementations and simplified function memoizatio
 License:        MIT
 URL:            https://crates.io/crates/cached
 Source:         %{crates_source}
+# Manually created patch for downstream crate metadata changes
+Patch:          cached-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -155,78 +157,6 @@ This package contains library source intended for building other packages which
 use the "r2d2" feature of the "%{crate}" crate.
 
 %files       -n %{name}+r2d2-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis_ahash-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis_ahash-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis_ahash" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis_ahash-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis_async_std-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis_async_std-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis_async_std" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis_async_std-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis_connection_manager-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis_connection_manager-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis_connection_manager" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis_connection_manager-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis_store-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis_store-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis_store" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis_store-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+redis_tokio-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+redis_tokio-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "redis_tokio" feature of the "%{crate}" crate.
-
-%files       -n %{name}+redis_tokio-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+serde-devel
