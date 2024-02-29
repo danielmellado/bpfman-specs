@@ -5,7 +5,7 @@
 %global crate cached_proc_macro
 
 Name:           rust-cached_proc_macro
-Version:        0.19.1
+Version:        0.20.0
 Release:        %autorelease
 Summary:        Generic cache implementations and simplified function memoization
 
